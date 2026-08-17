@@ -3,7 +3,7 @@ Plecs {
   Version       "5.0"
   CircuitModel  "ContStateSpace"
   StartTime     "0.0"
-  TimeSpan      "20e-1"
+  TimeSpan      "20"
   Timeout       ""
   Solver        "auto"
   MaxStep       "1e-3"
@@ -71,7 +71,7 @@ Plecs {
   InvalidNetlistFunctionEvaluationMsg "1"
   IncompatibleInitialConditionMsg "2"
   Schematic {
-    Location      [0, 24; 1920, 990]
+    Location      [0, 23; 1920, 989]
     ZoomFactor    1.55351
     SliderPosition [0, 0]
     ShowBrowser   off
@@ -87,20 +87,6 @@ Plecs {
       Parameter {
         Variable      "V"
         Value         "5"
-        Show          on
-      }
-    }
-    Component {
-      Type          Resistor
-      Name          "R1"
-      Show          on
-      Position      [705, 215]
-      Direction     up
-      Flipped       off
-      LabelPosition east
-      Parameter {
-        Variable      "R"
-        Value         "7"
         Show          on
       }
     }
@@ -122,15 +108,15 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [0, 24; 1920, 1064]
+      Location      [0, 24; 1920, 1030]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAeAAAAAhPw"
+"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAeAAAAAYvw"
 "BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABEAP///wAAB4AAAANnAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":165,\"Labels\":[],"
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":173,\"Labels\":[],"
 "\"VisualIdxs\":[]}"
       PlotPalettes  "AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
       Axes          "1"
@@ -180,9 +166,9 @@ Plecs {
       Flipped       off
       LabelPosition south
       Probe {
-        Component     "R1"
+        Component     "C5"
         Path          ""
-        Signals       {"Resistor power", "Resistor voltage", "Resistor current"}
+        Signals       {"Capacitor voltage", "Capacitor current"}
       }
     }
     Component {
@@ -296,7 +282,7 @@ Plecs {
       Flipped       off
       LabelPosition south
       Probe {
-        Component     "R9"
+        Component     "R8"
         Path          ""
         Signals       {"Resistor voltage"}
       }
@@ -311,7 +297,7 @@ Plecs {
       LabelPosition west
       Parameter {
         Variable      "R"
-        Value         "8200"
+        Value         "3300"
         Show          on
       }
     }
@@ -325,7 +311,7 @@ Plecs {
       LabelPosition west
       Parameter {
         Variable      "R"
-        Value         "3300"
+        Value         "8200"
         Show          on
       }
     }
@@ -969,6 +955,25 @@ Plecs {
         Show          on
       }
     }
+    Component {
+      Type          Capacitor
+      Name          "C5"
+      Show          on
+      Position      [705, 215]
+      Direction     down
+      Flipped       on
+      LabelPosition west
+      Parameter {
+        Variable      "C"
+        Value         "1"
+        Show          on
+      }
+      Parameter {
+        Variable      "v_init"
+        Value         "0"
+        Show          on
+      }
+    }
     Connection {
       Type          Wire
       SrcComponent  "Ground"
@@ -978,7 +983,7 @@ Plecs {
         Points        [620, 290]
         Branch {
           Points        [705, 290]
-          DstComponent  "R1"
+          DstComponent  "C5"
           DstTerminal   2
         }
         Branch {
@@ -1029,22 +1034,23 @@ Plecs {
     }
     Connection {
       Type          Wire
-      SrcComponent  "R1"
+      SrcComponent  "C1"
       SrcTerminal   1
-      Points        [705, 145; 650, 145]
+      Points        [620, 145]
       Branch {
-        Points        [620, 145]
+        Points        [650, 145]
         Branch {
-          DstComponent  "C1"
+          Points        [705, 145]
+          DstComponent  "C5"
           DstTerminal   1
         }
         Branch {
-          DstComponent  "Netlist2"
+          DstComponent  "Label2"
           DstTerminal   1
         }
       }
       Branch {
-        DstComponent  "Label2"
+        DstComponent  "Netlist2"
         DstTerminal   1
       }
     }
@@ -1214,17 +1220,10 @@ Plecs {
       }
     }
     Annotation {
-      Name          "<html><body>\n<p><span style=\" font-weight:700; color:#0"
-"000b0;\">NPN Series Pass with No Compensation</span></p>\n<p><span style=\" f"
-"ont-weight:700; color:#0000b0;\">ELECTENG 311</span></p>\n<p><span style=\" f"
-"ont-size:9px; font-weight:700; color:#0000b0;\">Duleep J Thrimawithana (07-20"
-"26)</span></p></body></html>"
+      Name          "<html><body>\n<p>Charger circuit with current limiting</p"
+">\n<p>ELECTENG 311</p>\n<p>Derrick Shen, Kiran Elango (13/8/2026)</p></body><"
+"/html>"
       Position      [175, 70]
-    } 
-    Annotation {
-      Name          "<html><body>\n<p>Changing RL changes Vout</p></body></htm"
-"l>"
-      Position      [800, 250]
     } 
   }
 }
