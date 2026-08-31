@@ -1,5 +1,5 @@
 Plecs {
-  Name          "Charger working design"
+  Name          "SmartSystemsTest"
   Version       "5.0"
   CircuitModel  "ContStateSpace"
   StartTime     "0.0"
