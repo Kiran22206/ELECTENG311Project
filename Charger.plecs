@@ -1,5 +1,5 @@
 Plecs {
-  Name          "Charger new design"
+  Name          "Charger final new design"
   Version       "5.0"
   CircuitModel  "ContStateSpace"
   StartTime     "0.0"
@@ -73,14 +73,14 @@ Plecs {
   Schematic {
     Location      [0, 24; 1920, 990]
     ZoomFactor    1.35753
-    SliderPosition [0, 15]
+    SliderPosition [0, 28]
     ShowBrowser   off
     BrowserWidth  100
     Component {
       Type          DCVoltageSource
       Name          "Vin"
       Show          on
-      Position      [245, 230]
+      Position      [420, 255]
       Direction     down
       Flipped       on
       LabelPosition east
@@ -94,7 +94,7 @@ Plecs {
       Type          Ground
       Name          "Ground"
       Show          off
-      Position      [630, 330]
+      Position      [870, 355]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -103,16 +103,16 @@ Plecs {
       Type          Scope
       Name          "Scope"
       Show          on
-      Position      [935, 110]
+      Position      [1175, 135]
       Direction     up
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [0, 23; 1920, 1011]
+      Location      [0, 24; 1920, 1064]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAeAAAAAc/w"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABEAP///wAAB4AAAANEAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABEAP///wAAB4AAAAN4AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -161,7 +161,7 @@ Plecs {
       Type          PlecsProbe
       Name          "Probe"
       Show          on
-      Position      [860, 110]
+      Position      [1100, 135]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -175,7 +175,7 @@ Plecs {
       Type          Label
       Name          "Label1"
       Show          off
-      Position      [610, 595]
+      Position      [850, 620]
       Direction     down
       Flipped       off
       LabelPosition west
@@ -210,7 +210,7 @@ Plecs {
       Type          Ground
       Name          "Ground1"
       Show          off
-      Position      [760, 495]
+      Position      [1000, 520]
       Direction     up
       Flipped       on
       LabelPosition east
@@ -219,16 +219,16 @@ Plecs {
       Type          Scope
       Name          "Scope1"
       Show          on
-      Position      [935, 165]
+      Position      [1175, 190]
       Direction     up
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [0, 23; 1920, 1011]
+      Location      [0, 24; 1920, 1064]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAeAAAAAYvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABEAP///wAAB4AAAANVAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABEAP///wAAB4AAAAOJAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -277,21 +277,21 @@ Plecs {
       Type          PlecsProbe
       Name          "Probe1"
       Show          on
-      Position      [860, 165]
+      Position      [1100, 190]
       Direction     right
       Flipped       off
       LabelPosition south
       Probe {
-        Component     "Rsense2"
+        Component     "Rf"
         Path          ""
-        Signals       {"Resistor power"}
+        Signals       {"Resistor voltage", "Resistor current", "Resistor power"}
       }
     }
     Component {
       Type          Resistor
       Name          "Ra"
       Show          on
-      Position      [885, 425]
+      Position      [1125, 450]
       Direction     down
       Flipped       on
       LabelPosition west
@@ -305,7 +305,7 @@ Plecs {
       Type          Resistor
       Name          "Rb"
       Show          on
-      Position      [885, 515]
+      Position      [1125, 540]
       Direction     down
       Flipped       on
       LabelPosition west
@@ -319,7 +319,7 @@ Plecs {
       Type          Ground
       Name          "Ground4"
       Show          off
-      Position      [885, 560]
+      Position      [1125, 585]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -328,7 +328,7 @@ Plecs {
       Type          Label
       Name          "Label2"
       Show          off
-      Position      [695, 145]
+      Position      [990, 170]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -363,7 +363,7 @@ Plecs {
       Type          Label
       Name          "Label3"
       Show          off
-      Position      [885, 385]
+      Position      [1125, 410]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -398,7 +398,7 @@ Plecs {
       Type          Capacitor
       Name          "C0"
       Show          on
-      Position      [665, 230]
+      Position      [965, 255]
       Direction     down
       Flipped       on
       LabelPosition west
@@ -417,10 +417,10 @@ Plecs {
       Type          Label
       Name          "Label5"
       Show          off
-      Position      [790, 515]
-      Direction     right
+      Position      [1060, 615]
+      Direction     down
       Flipped       off
-      LabelPosition south
+      LabelPosition west
       Parameter {
         Variable      "Tag"
         Value         "VREF"
@@ -452,7 +452,7 @@ Plecs {
       Type          Resistor
       Name          "Rf"
       Show          on
-      Position      [670, 695]
+      Position      [910, 720]
       Direction     left
       Flipped       on
       LabelPosition north
@@ -466,7 +466,7 @@ Plecs {
       Type          Capacitor
       Name          "Cf"
       Show          on
-      Position      [735, 695]
+      Position      [975, 720]
       Direction     left
       Flipped       on
       LabelPosition north
@@ -485,7 +485,7 @@ Plecs {
       Type          Capacitor
       Name          "Ca"
       Show          on
-      Position      [820, 425]
+      Position      [1060, 450]
       Direction     down
       Flipped       on
       LabelPosition west
@@ -504,7 +504,7 @@ Plecs {
       Type          Label
       Name          "Label6"
       Show          off
-      Position      [290, 125]
+      Position      [530, 150]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -539,7 +539,7 @@ Plecs {
       Type          Resistor
       Name          "Rg"
       Show          on
-      Position      [575, 495]
+      Position      [815, 520]
       Direction     left
       Flipped       on
       LabelPosition north
@@ -553,7 +553,7 @@ Plecs {
       Type          Resistor
       Name          "R1"
       Show          on
-      Position      [165, 190]
+      Position      [330, 215]
       Direction     down
       Flipped       on
       LabelPosition west
@@ -567,7 +567,7 @@ Plecs {
       Type          Resistor
       Name          "R2"
       Show          on
-      Position      [165, 270]
+      Position      [330, 295]
       Direction     down
       Flipped       on
       LabelPosition west
@@ -581,7 +581,7 @@ Plecs {
       Type          Label
       Name          "Label7"
       Show          off
-      Position      [195, 230]
+      Position      [360, 255]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -616,7 +616,7 @@ Plecs {
       Type          Capacitor
       Name          "Cd"
       Show          on
-      Position      [100, 270]
+      Position      [265, 295]
       Direction     down
       Flipped       on
       LabelPosition west
@@ -635,7 +635,7 @@ Plecs {
       Type          Capacitor
       Name          "CL"
       Show          on
-      Position      [750, 230]
+      Position      [1045, 255]
       Direction     down
       Flipped       on
       LabelPosition west
@@ -654,7 +654,7 @@ Plecs {
       Type          Netlist
       Name          "Netlist"
       Show          off
-      Position      [695, 495]
+      Position      [935, 520]
       Direction     left
       Flipped       off
       LabelPosition east
@@ -1137,7 +1137,7 @@ Plecs {
       Type          Netlist
       Name          "Netlist3"
       Show          off
-      Position      [530, 150]
+      Position      [770, 175]
       Direction     left
       Flipped       off
       LabelPosition east
@@ -1221,13 +1221,13 @@ Plecs {
       Type          Capacitor
       Name          "Ci"
       Show          on
-      Position      [340, 230]
+      Position      [590, 255]
       Direction     down
       Flipped       on
       LabelPosition west
       Parameter {
         Variable      "C"
-        Value         "10e-6"
+        Value         "100e-6"
         Show          on
       }
       Parameter {
@@ -1240,7 +1240,7 @@ Plecs {
       Type          Resistor
       Name          "Rsense1"
       Show          on
-      Position      [405, 160]
+      Position      [645, 185]
       Direction     left
       Flipped       on
       LabelPosition north
@@ -1254,7 +1254,7 @@ Plecs {
       Type          Resistor
       Name          "Rsense2"
       Show          on
-      Position      [450, 160]
+      Position      [690, 185]
       Direction     left
       Flipped       on
       LabelPosition north
@@ -1268,7 +1268,7 @@ Plecs {
       Type          Netlist
       Name          "Netlist2"
       Show          off
-      Position      [415, 230]
+      Position      [655, 255]
       Direction     right
       Flipped       off
       LabelPosition west
@@ -1354,7 +1354,7 @@ Plecs {
       Type          Capacitor
       Name          "C1"
       Show          on
-      Position      [695, 580]
+      Position      [935, 605]
       Direction     right
       Flipped       on
       LabelPosition south
@@ -1369,46 +1369,110 @@ Plecs {
         Show          on
       }
     }
+    Component {
+      Type          Resistor
+      Name          "Rf2"
+      Show          on
+      Position      [1035, 540]
+      Direction     left
+      Flipped       on
+      LabelPosition north
+      Parameter {
+        Variable      "R"
+        Value         "330"
+        Show          on
+      }
+    }
+    Component {
+      Type          Capacitor
+      Name          "C01"
+      Show          on
+      Position      [870, 255]
+      Direction     down
+      Flipped       on
+      LabelPosition west
+      Parameter {
+        Variable      "C"
+        Value         "100e-9"
+        Show          on
+      }
+      Parameter {
+        Variable      "v_init"
+        Value         "0"
+        Show          on
+      }
+    }
+    Component {
+      Type          Capacitor
+      Name          "Ci2"
+      Show          on
+      Position      [520, 255]
+      Direction     down
+      Flipped       on
+      LabelPosition west
+      Parameter {
+        Variable      "C"
+        Value         "100e-9"
+        Show          on
+      }
+      Parameter {
+        Variable      "v_init"
+        Value         "0"
+        Show          on
+      }
+    }
     Connection {
       Type          Wire
-      SrcComponent  "CL"
+      SrcComponent  "R2"
       SrcTerminal   2
-      Points        [750, 305; 665, 305]
+      Points        [330, 330]
       Branch {
-        Points        [630, 305]
+        Points        [420, 330]
         Branch {
-          Points        [340, 305]
+          Points        [520, 330]
           Branch {
-            Points        [245, 305]
+            Points        [590, 330]
             Branch {
-              DstComponent  "Vin"
-              DstTerminal   2
+              Points        [870, 330]
+              Branch {
+                Points        [965, 330]
+                Branch {
+                  Points        [1045, 330]
+                  DstComponent  "CL"
+                  DstTerminal   2
+                }
+                Branch {
+                  DstComponent  "C0"
+                  DstTerminal   2
+                }
+              }
+              Branch {
+                DstComponent  "Ground"
+                DstTerminal   1
+              }
+              Branch {
+                DstComponent  "C01"
+                DstTerminal   2
+              }
             }
             Branch {
-              Points        [165, 305]
-              Branch {
-                DstComponent  "R2"
-                DstTerminal   2
-              }
-              Branch {
-                Points        [100, 305]
-                DstComponent  "Cd"
-                DstTerminal   2
-              }
+              DstComponent  "Ci"
+              DstTerminal   2
             }
           }
           Branch {
-            DstComponent  "Ci"
+            DstComponent  "Ci2"
             DstTerminal   2
           }
         }
         Branch {
-          DstComponent  "Ground"
-          DstTerminal   1
+          DstComponent  "Vin"
+          DstTerminal   2
         }
       }
       Branch {
-        DstComponent  "C0"
+        Points        [265, 330]
+        DstComponent  "Cd"
         DstTerminal   2
       }
     }
@@ -1435,24 +1499,30 @@ Plecs {
     }
     Connection {
       Type          Wire
-      SrcComponent  "C0"
+      SrcComponent  "CL"
       SrcTerminal   1
-      Points        [665, 160]
+      Points        [1045, 185; 990, 185]
       Branch {
-        Points        [695, 160]
+        Points        [965, 185]
         Branch {
-          Points        [750, 160]
-          DstComponent  "CL"
-          DstTerminal   1
+          Points        [870, 185]
+          Branch {
+            Points        [795, 185; 795, 125; 745, 125; 745, 195]
+            DstComponent  "Netlist3"
+            DstTerminal   1
+          }
+          Branch {
+            DstComponent  "C01"
+            DstTerminal   1
+          }
         }
         Branch {
-          DstComponent  "Label2"
+          DstComponent  "C0"
           DstTerminal   1
         }
       }
       Branch {
-        Points        [555, 160; 555, 100; 505, 100; 505, 170]
-        DstComponent  "Netlist3"
+        DstComponent  "Label2"
         DstTerminal   1
       }
     }
@@ -1460,19 +1530,19 @@ Plecs {
       Type          Wire
       SrcComponent  "Rb"
       SrcTerminal   1
-      Points        [885, 475]
+      Points        [1125, 500]
       Branch {
         DstComponent  "Ra"
         DstTerminal   2
       }
       Branch {
-        Points        [820, 475]
+        Points        [1060, 500]
         Branch {
           DstComponent  "Ca"
           DstTerminal   2
         }
         Branch {
-          Points        [745, 475; 745, 400; 650, 400; 650, 515]
+          Points        [985, 500; 985, 425; 890, 425; 890, 540]
           DstComponent  "Netlist"
           DstTerminal   1
         }
@@ -1482,13 +1552,13 @@ Plecs {
       Type          Wire
       SrcComponent  "Rg"
       SrcTerminal   1
-      Points        [635, 495]
+      Points        [875, 520]
       Branch {
         DstComponent  "Netlist"
         DstTerminal   5
       }
       Branch {
-        Points        [635, 695]
+        Points        [875, 720]
         DstComponent  "Rf"
         DstTerminal   2
       }
@@ -1497,13 +1567,13 @@ Plecs {
       Type          Wire
       SrcComponent  "Label3"
       SrcTerminal   1
-      Points        [885, 400]
+      Points        [1125, 425]
       Branch {
         DstComponent  "Ra"
         DstTerminal   1
       }
       Branch {
-        Points        [820, 400]
+        Points        [1060, 425]
         DstComponent  "Ca"
         DstTerminal   1
       }
@@ -1519,29 +1589,36 @@ Plecs {
       Type          Wire
       SrcComponent  "Label6"
       SrcTerminal   1
-      Points        [290, 160]
+      Points        [530, 185]
       Branch {
-        Points        [245, 160]
+        Points        [520, 185]
         Branch {
-          DstComponent  "Vin"
-          DstTerminal   1
+          Points        [420, 185]
+          Branch {
+            Points        [330, 185]
+            DstComponent  "R1"
+            DstTerminal   1
+          }
+          Branch {
+            DstComponent  "Vin"
+            DstTerminal   1
+          }
         }
         Branch {
-          Points        [165, 160]
-          DstComponent  "R1"
+          DstComponent  "Ci2"
           DstTerminal   1
         }
       }
       Branch {
-        Points        [340, 160]
+        Points        [590, 185]
         Branch {
-          Points        [375, 160]
+          Points        [615, 185]
           Branch {
             DstComponent  "Rsense1"
             DstTerminal   2
           }
           Branch {
-            Points        [375, 210]
+            Points        [615, 235]
             DstComponent  "Netlist2"
             DstTerminal   2
           }
@@ -1556,7 +1633,7 @@ Plecs {
       Type          Wire
       SrcComponent  "R2"
       SrcTerminal   1
-      Points        [165, 230]
+      Points        [330, 255]
       Branch {
         DstComponent  "R1"
         DstTerminal   2
@@ -1566,22 +1643,8 @@ Plecs {
         DstTerminal   1
       }
       Branch {
-        Points        [100, 230]
+        Points        [265, 255]
         DstComponent  "Cd"
-        DstTerminal   1
-      }
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "Cf"
-      SrcTerminal   1
-      Points        [760, 695; 760, 515]
-      Branch {
-        DstComponent  "Netlist"
-        DstTerminal   2
-      }
-      Branch {
-        DstComponent  "Label5"
         DstTerminal   1
       }
     }
@@ -1589,7 +1652,7 @@ Plecs {
       Type          Wire
       SrcComponent  "Netlist"
       SrcTerminal   3
-      Points        [610, 505; 610, 580]
+      Points        [850, 530; 850, 605]
       Branch {
         DstComponent  "Label1"
         DstTerminal   1
@@ -1603,13 +1666,13 @@ Plecs {
       Type          Wire
       SrcComponent  "Ground1"
       SrcTerminal   1
-      Points        [745, 505]
+      Points        [985, 530]
       Branch {
         DstComponent  "Netlist"
         DstTerminal   4
       }
       Branch {
-        Points        [745, 580]
+        Points        [985, 605]
         DstComponent  "C1"
         DstTerminal   2
       }
@@ -1625,7 +1688,7 @@ Plecs {
       Type          Wire
       SrcComponent  "Rg"
       SrcTerminal   2
-      Points        [550, 495; 550, 220]
+      Points        [790, 520; 790, 245]
       Branch {
         DstComponent  "Netlist3"
         DstTerminal   2
@@ -1639,22 +1702,44 @@ Plecs {
       Type          Wire
       SrcComponent  "Rsense2"
       SrcTerminal   1
-      Points        [480, 160]
+      Points        [720, 185]
       Branch {
         DstComponent  "Netlist3"
         DstTerminal   3
       }
       Branch {
-        Points        [480, 210]
+        Points        [720, 235]
         DstComponent  "Netlist2"
         DstTerminal   1
       }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Cf"
+      SrcTerminal   1
+      Points        [1000, 720; 1000, 540]
+      Branch {
+        DstComponent  "Netlist"
+        DstTerminal   2
+      }
+      Branch {
+        DstComponent  "Rf2"
+        DstTerminal   2
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Rf2"
+      SrcTerminal   1
+      Points        [1060, 540]
+      DstComponent  "Label5"
+      DstTerminal   1
     }
     Annotation {
       Name          "<html><body>\n<p>Charger circuit with current limiting</p"
 ">\n<p>ELECTENG 311</p>\n<p>Derrick Shen, Kiran Elango (13/8/2026)</p></body><"
 "/html>"
-      Position      [225, 70]
+      Position      [465, 95]
     } 
   }
 }
